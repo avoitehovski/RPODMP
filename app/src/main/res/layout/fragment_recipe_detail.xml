@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RecipeDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/recipeTimeTextView"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/recipeImageView"
+            app:layout_constraintEnd_toEndOf="@+id/recipeIngredientsTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/recipeIngredientsTextView"
+            app:layout_constraintTop_toBottomOf="@+id/recipeIngredientsTextView" />
+
+        <ImageView
+            android:id="@+id/recipeImageView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_question_mark_24" />
+
+        <TextView
+            android:id="@+id/recipeIngredientsTextView"
+            android:layout_width="299dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:text="TextView\naa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recipeImageView"
+            app:layout_constraintTop_toTopOf="@+id/recipeImageView" />
+
+        <TextView
+            android:id="@+id/recipeNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/recipeIngredientsTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recipeDescriptionTextView"
+            android:layout_width="382dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:text="TextView\naa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/recipeTimeTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/recipeImageView"
+            app:layout_constraintTop_toBottomOf="@+id/recipeTimeTextView" />
+
+        <TextView
+            android:id="@+id/recipeCategoryTextView"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/recipeImageView"
+            app:layout_constraintEnd_toEndOf="@+id/recipeIngredientsTextView"
+            app:layout_constraintTop_toBottomOf="@+id/recipeIngredientsTextView"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="product"
+            type="com.example.rpodmp.entities.Product" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LR3.NewProductThirdStep">
+
+        <Button
+            android:id="@+id/productSaveButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="410dp"
+            android:layout_height="81dp"
+            android:text="Сохранить"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/providerSpinner"
+            android:layout_width="380dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="40dp"
+            android:entries="@array/Providers"
+            android:selectedItemPosition="@={product.provider}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooseProviderTextView" />
+
+        <TextView
+            android:id="@+id/chooseProviderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Выбрать провайдера"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/providerSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/productCountEditText" />
+
+        <TextView
+            android:id="@+id/productCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Введите количество продуктов"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/productCountEditText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/productCountEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:inputType="number|numberSigned"
+            android:text="@={`` + product.count}"
+            app:layout_constraintStart_toStartOf="@+id/chooseProviderTextView"
+            app:layout_constraintTop_toBottomOf="@+id/productCountTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

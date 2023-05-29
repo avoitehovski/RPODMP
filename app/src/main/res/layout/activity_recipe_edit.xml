@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="recipe"
+            type="com.example.rpodmp.entities.Recipe" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        tools:context=".LR4.RecipeEditActivity">
+
+        <Button
+            android:id="@+id/recipeSaveButton"
+            android:layout_width="200dp"
+            android:layout_height="47dp"
+            android:text="Сохранить"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/recipeImageButton"
+            android:layout_width="199dp"
+            android:layout_height="61dp"
+            android:text="Установить изображение"
+            app:layout_constraintBottom_toTopOf="@+id/recipeSaveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeImageView" />
+
+        <EditText
+            android:id="@+id/receptEditTextTextMultiLine"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Прием"
+            android:inputType="textMultiLine"
+            android:text="@={recipe.description}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredientsEditTextTextMultiLine" />
+
+        <EditText
+            android:id="@+id/recipeNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Название рецепта"
+            android:inputType="text"
+            android:text="@={recipe.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/ingredientsEditTextTextMultiLine"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Ингредиенты"
+            android:inputType="textMultiLine"
+            android:text="@={recipe.ingredients}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeCatergorySpinner" />
+
+        <EditText
+            android:id="@+id/recipeTimeEditTextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:hint="Время приготовления (минут)"
+            android:inputType="number|numberSigned"
+            android:text="@={`` + recipe.time}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/receptEditTextTextMultiLine" />
+
+        <ImageView
+            android:id="@+id/recipeImageView"
+            android:layout_width="130dp"
+            android:layout_height="122dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="185dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeTimeEditTextTime"
+            app:layout_constraintVertical_bias="1.0"
+            app:recipeImage="@{recipe.imagePath}"
+            app:srcCompat="@drawable/baseline_question_mark_24" />
+
+        <Spinner
+            android:id="@+id/recipeCatergorySpinner"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:entries="@array/Recipes"
+            android:selectedItemPosition="@={recipe.category}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeNameEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

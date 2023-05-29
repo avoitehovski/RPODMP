@@ -1,0 +1,34 @@
+<resources>
+    <plurals name="payback">
+        <item quantity="one">Payback in %d day</item>
+        <item quantity="few">Payback in %d days</item>
+        <item quantity="many">Payback in %d days</item>
+        <item quantity="zero">Payback in %d days</item>
+        <item quantity="other">Payback in %d days</item>
+    </plurals>
+    <string name="title_activity_products">ProductsActivity</string>
+    <string-array name="Categories">
+        <item>Appliances</item>
+        <item>Smartphones, TV</item>
+        <item>Laptops</item>
+        <item>Furniture</item>
+        <item>Pet supplies</item>
+        <item>Books</item>
+    </string-array>
+
+    <string-array name="Providers">
+        <item>Ozon</item>
+        <item>Wildberries</item>
+        <item>AliExpress</item>
+        <item>Alibaba</item>
+    </string-array>
+    <string-array name="Recipes">
+        <item>Soup</item>
+        <item>Dessert</item>
+        <item>Salad</item>
+        <item>Bakery</item>
+        <item>Alcoholic drinks</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

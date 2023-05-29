@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LR2Activity">
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="151dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="44dp"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceEditText" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="60dp"
+        android:text="Окупаемость за 3 дня"
+        android:textColor="#27732A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/devicePriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Цена:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/deviceSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/deviceSpinner" />
+
+    <TextView
+        android:id="@+id/deviceProfitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Выгода:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/devicePriceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/deviceSpinner" />
+
+    <TextView
+        android:id="@+id/deviceEnergyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:text="Потребление энергии:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/deviceProfitTextView"
+        app:layout_constraintTop_toBottomOf="@+id/deviceSpinner" />
+
+    <TextView
+        android:id="@+id/chooseDeviceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:text="Выберите устройство для майнинга"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/priceTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/deviceSpinner"
+        android:layout_width="380dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/priceEditText" />
+
+    <EditText
+        android:id="@+id/priceEditText"
+        android:layout_width="104dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:hint="0.00 $"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="330dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="48dp"
+        android:text="Введите цену на электроэнергию"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

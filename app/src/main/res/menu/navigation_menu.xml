@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/LR1"
+        android:icon="@drawable/lightbulb_24"
+        android:title="Лабораторная работа №1"/>
+
+    <item android:id="@+id/LR2"
+        android:icon="@drawable/baseline_crop_landscape_24"
+        android:title="Лабораторная работа №2"/>
+
+    <item android:id="@+id/LR3"
+        android:icon="@drawable/baseline_360_24"
+        android:title="Лабораторная работа №3-4"/>
+
+
+    <item android:id="@+id/LR5"
+        android:icon="@drawable/lightbulb_24"
+        android:title="Лабораторная работа №5"/>
+
+
+</menu>
